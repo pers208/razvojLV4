@@ -46,8 +46,8 @@ namespace razvojLV4
 
             //peti zadatak
             List<IRentable> flashSale = new List<IRentable>();
-            flashSale.Add(new DiscountedItem(new Video("Transformers")));
-            flashSale.Add(new DiscountedItem(new Book("Hunger Games")));
+            flashSale.Add(new DiscountedItem(new Video("Transformers"),0.2));
+            flashSale.Add(new DiscountedItem(new Book("Hunger Games"),0.3));
             Console.WriteLine("sasalele");
             rentingConsolePrinter.DisplayItems(flashSale);
             rentingConsolePrinter.PrintTotalPrice(flashSale);
@@ -72,7 +72,6 @@ namespace razvojLV4
 
             //sedmi zadatak
             UserValidator userValidator = new UserValidator();
-            UserEntry.ReadUserFromConsole();
             while (!userValidator.IsUserEntryValid(UserEntry.ReadUserFromConsole()));
         }
     }
