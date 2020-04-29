@@ -9,7 +9,7 @@ namespace razvojLV4
     class DiscountedItem : RentableDecorator
     {
         private readonly double discountPercentage = 0.1;
-        public DiscountedItem(IRentable rentable) : base(rentable) { }
+        public DiscountedItem(IRentable rentable,double discount) : base(rentable) { discountPercentage = discount; }
         public override double CalculatePrice()
         {
             return base.CalculatePrice() -base.CalculatePrice()* discountPercentage;
